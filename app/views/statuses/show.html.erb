@@ -10,6 +10,8 @@
   <%= @status.content %>
 </p>
 
+Content: <%= rating_for @status, "content" %>
+
 
 <%= link_to 'Edit', edit_status_path(@status) %> |
 <%= link_to 'Back', statuses_path %>

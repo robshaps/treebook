@@ -1,4 +1,8 @@
 Treebook::Application.routes.draw do
+  match '/rate' => 'rater#create', :as => 'rate'
+
+  devise_for :users
+
   resources :statuses
 
 
@@ -51,7 +55,7 @@ Treebook::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'statuses#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
 <div class="navbar navbar-fixed-top">
  
   <div class="navbar-inner">
@@ -17,6 +21,7 @@
 
 <ul class="nav">
   <li><%= link_to "All Statuses", statuses_path %> </li>
+  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
     </ul>
   </div>
 </div>
